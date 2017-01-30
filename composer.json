@@ -1,6 +1,7 @@
 {
     "name": "phlib/base_convert",
     "description": "base_convert function with support for large arbitrary number",
+    "license": "LGPL-3.0",
     "authors": [
         {
             "name": "James Dempster",
