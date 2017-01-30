@@ -1,6 +1,7 @@
 # phlib/base_convert
 
 [![Build Status](https://img.shields.io/travis/phlib/base_convert/master.svg?style=flat-square)](https://travis-ci.org/phlib/base_convert)
+[![Codecov](https://img.shields.io/codecov/c/github/phlib/base_convert.svg)](https://codecov.io/gh/phlib/base_convert)
 [![Latest Stable Version](https://img.shields.io/packagist/v/phlib/base_convert.svg?style=flat-square)](https://packagist.org/packages/phlib/base_convert)
 [![Total Downloads](https://img.shields.io/packagist/dt/phlib/base_convert.svg?style=flat-square)](https://packagist.org/packages/phlib/base_convert)
 
