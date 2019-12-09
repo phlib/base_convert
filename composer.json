@@ -4,8 +4,11 @@
     "license": "LGPL-3.0",
     "authors": [
         {
-            "name": "James Dempster",
-            "email": "james.dempster@emailcenteruk.com"
+            "name": "James Dempster"
+        },
+        {
+            "name": "Phlib Team",
+            "homepage": "https://github.com/phlib/path/contributors"
         }
     ],
     "autoload": {
