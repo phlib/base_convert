@@ -18,7 +18,7 @@
         "files": ["src/base_convert.php"]
     },
     "require": {
-        "php" : ">=5.4.0",
+        "php" : "^7.1",
         "ext-bcmath": "*"
     },
     "require-dev": {
