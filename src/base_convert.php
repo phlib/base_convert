@@ -9,12 +9,8 @@ namespace Phlib;
  *
  * @see http://php.net/manual/en/function.base-convert.php
  * @see http://php.net/manual/en/function.base-convert.php#109660
- * @param string $number
- * @param int $frombase
- * @param int $tobase
- * @return string
  */
-function base_convert($number, $frombase, $tobase)
+function base_convert(string $number, int $frombase, int $tobase): string
 {
     if ($frombase == $tobase) {
         return $number;

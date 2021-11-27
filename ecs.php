@@ -24,10 +24,8 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     // Save strict to later
     $services->remove(\PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer::class);
-    $services->remove(\PhpCsFixer\Fixer\Strict\StrictParamFixer::class);
     $services->remove(\PhpCsFixer\Fixer\Strict\StrictComparisonFixer::class);
     $services->remove(\PhpCsFixer\Fixer\PhpUnit\PhpUnitStrictFixer::class);
-    $services->remove(\PhpCsFixer\Fixer\PhpUnit\PhpUnitSetUpTearDownVisibilityFixer::class);
 
     $containerConfigurator->import(SetList::PSR_12);
 };
