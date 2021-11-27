@@ -45,4 +45,3 @@ function base_convert($number, $frombase, $tobase)
 
     return (string)$result;
 }
-
