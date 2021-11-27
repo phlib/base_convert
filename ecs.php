@@ -22,10 +22,5 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->remove(\PhpCsFixer\Fixer\Operator\NotOperatorWithSuccessorSpaceFixer::class);
     $services->remove(\PhpCsFixer\Fixer\CastNotation\CastSpacesFixer::class);
 
-    // Save strict to later
-    $services->remove(\PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer::class);
-    $services->remove(\PhpCsFixer\Fixer\Strict\StrictComparisonFixer::class);
-    $services->remove(\PhpCsFixer\Fixer\PhpUnit\PhpUnitStrictFixer::class);
-
     $containerConfigurator->import(SetList::PSR_12);
 };
