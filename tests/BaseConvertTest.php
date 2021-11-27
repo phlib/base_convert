@@ -7,13 +7,13 @@ class BaseConvertTest extends \PHPUnit_Framework_TestCase
     public function testSmallConversionMatchesBuiltinFunction()
     {
         $number = 1234567890;
-        $this->assertEquals(base_convert($number, 10, 36), \Phlib\base_convert($number, 10, 36));
+        $this->assertEquals(\base_convert($number, 10, 36), \Phlib\base_convert($number, 10, 36));
     }
 
     public function testSmallConversionAsString()
     {
         $number = '1234567890';
-        $this->assertEquals(base_convert($number, 10, 36), \Phlib\base_convert($number, 10, 36));
+        $this->assertEquals(\base_convert($number, 10, 36), \Phlib\base_convert($number, 10, 36));
     }
 
     public function testLargeNumberConvertsBack()
