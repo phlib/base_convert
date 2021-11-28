@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
-- Add support for PHP v7.4 .
+- Add support for PHP v7.4 & v8.0 .
 - Type declarations have been added to all parameters and return types.
 - Validation with `\InvalidArgumentException` for the `base_convert()`
   parameters to match the warnings added for the original PHP function in v7.4.
