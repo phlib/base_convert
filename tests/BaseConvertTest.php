@@ -43,9 +43,6 @@ class BaseConvertTest extends TestCase
         ];
     }
 
-    /**
-     * @requires PHP 7.4
-     */
     public function testOriginalNumberCharactersWarning(): void
     {
         /**
