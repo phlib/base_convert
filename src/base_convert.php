@@ -50,7 +50,7 @@ function base_convert(string $number, int $fromBase, int $toBase): string
     if ($toBase !== 10) {
         $result = '';
         while (bccomp($fromDec, '0', 0) > 0) {
-            $v = (string)intval(bcmod($fromDec, (string)$toBase));
+            $v = bcmod($fromDec, (string)$toBase);
             $result = \base_convert($v, 10, $toBase) . $result;
             $fromDec = bcdiv($fromDec, (string)$toBase, 0);
         }
