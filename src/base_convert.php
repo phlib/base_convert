@@ -27,6 +27,9 @@ function base_convert(string $number, int $fromBase, int $toBase): string
     if (filter_var($toBase, FILTER_VALIDATE_INT, $baseOptions) === false) {
         throw new \InvalidArgumentException("Invalid `to base' ({$toBase})");
     }
+    if (preg_match('/^[a-z0-9]+$/', $number) === 0) {
+        throw new \InvalidArgumentException('Invalid characters passed for attempted conversion');
+    }
 
     if ($fromBase === $toBase) {
         return $number;
