@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Phlib;
 
-use PHPUnit\Framework\Error\Deprecated as DeprecatedError;
 use PHPUnit\Framework\TestCase;
 
 class BaseConvertTest extends TestCase
@@ -53,8 +52,8 @@ class BaseConvertTest extends TestCase
         $originalErrorLevel = error_reporting();
         error_reporting(E_ALL);
 
-        $this->expectException(DeprecatedError::class);
-        $this->expectExceptionMessage('Invalid characters passed for attempted conversion, these have been ignored');
+        $this->expectDeprecation();
+        $this->expectDeprecationMessage('Invalid characters passed for attempted conversion, these have been ignored');
 
         try {
             \Phlib\base_convert('123', 2, 10);
