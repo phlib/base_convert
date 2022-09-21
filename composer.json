@@ -8,7 +8,7 @@
         },
         {
             "name": "Phlib Team",
-            "homepage": "https://github.com/phlib/path/contributors"
+            "homepage": "https://github.com/phlib/base_convert/contributors"
         }
     ],
     "autoload": {
