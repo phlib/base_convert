@@ -1,6 +1,6 @@
 # phlib/base_convert
 
-[![Code Checks](https://img.shields.io/github/workflow/status/phlib/base_convert/CodeChecks?logo=github)](https://github.com/phlib/base_convert/actions/workflows/code-checks.yml)
+[![Code Checks](https://img.shields.io/github/actions/workflow/status/phlib/base_convert/code-checks.yml?logo=github)](https://github.com/phlib/base_convert/actions/workflows/code-checks.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/phlib/base_convert.svg?logo=codecov)](https://codecov.io/gh/phlib/base_convert)
 [![Latest Stable Version](https://img.shields.io/packagist/v/phlib/base_convert.svg?logo=packagist)](https://packagist.org/packages/phlib/base_convert)
 [![Total Downloads](https://img.shields.io/packagist/dt/phlib/base_convert.svg?logo=packagist)](https://packagist.org/packages/phlib/base_convert)
