@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Phlib;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class BaseConvertTest extends TestCase
@@ -14,9 +15,7 @@ class BaseConvertTest extends TestCase
         static::assertSame(\base_convert($number, 10, 36), \Phlib\base_convert($number, 10, 36));
     }
 
-    /**
-     * @dataProvider dataValidNumberCharacters
-     */
+    #[DataProvider('dataValidNumberCharacters')]
     public function testValidNumberCharacters(string $number, bool $isValid): void
     {
         if (!$isValid) {
@@ -32,7 +31,7 @@ class BaseConvertTest extends TestCase
         }
     }
 
-    public function dataValidNumberCharacters(): array
+    public static function dataValidNumberCharacters(): array
     {
         return [
             'numeric' => ['123', true],
@@ -52,19 +51,22 @@ class BaseConvertTest extends TestCase
         $originalErrorLevel = error_reporting();
         error_reporting(E_ALL);
 
-        $this->expectDeprecation();
-        $this->expectDeprecationMessage('Invalid characters passed for attempted conversion, these have been ignored');
+        set_error_handler(static function (int $errno, string $errstr): never {
+            throw new \Exception($errstr, $errno);
+        }, E_DEPRECATED);
+
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Invalid characters passed for attempted conversion, these have been ignored');
 
         try {
             \Phlib\base_convert('123', 2, 10);
         } finally {
             error_reporting($originalErrorLevel);
+            restore_error_handler();
         }
     }
 
-    /**
-     * @dataProvider dataValidBase
-     */
+    #[DataProvider('dataValidBase')]
     public function testValidFromBase(int $fromBase, bool $isValid): void
     {
         if (!$isValid) {
@@ -80,9 +82,7 @@ class BaseConvertTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider dataValidBase
-     */
+    #[DataProvider('dataValidBase')]
     public function testValidToBase(int $toBase, bool $isValid): void
     {
         if (!$isValid) {
@@ -98,7 +98,7 @@ class BaseConvertTest extends TestCase
         }
     }
 
-    public function dataValidBase(): array
+    public static function dataValidBase(): array
     {
         return [
             'too-small' => [1, false],
